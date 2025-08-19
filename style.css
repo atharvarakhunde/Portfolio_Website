@@ -1,0 +1,132 @@
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: "Segoe UI", Arial, sans-serif; background: #f7f9fc; color: #2c3e50; line-height: 1.7; }
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background: linear-gradient(135deg, #2c3e50, #3b4b5e);
+  color: #fff;
+  position: relative;
+}
+header h1 { font-size: 2.4rem; margin-bottom: 0.4rem; }
+header nav { margin-top: 1rem; }
+header nav a { margin: 0 12px; font-weight: 600; font-size: 0.95rem; color: #f8f8f8; }
+header nav a:hover { color: #f39c12; }
+
+/* PROFILE */
+.profile-container { display: flex; justify-content: center; margin-bottom: 1rem; }
+.profile-img {
+  width: 140px; height: 140px; border-radius: 50%; border: 4px solid #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); animation: float 4s ease-in-out infinite;
+}
+@keyframes float { 0%{transform:translateY(0)} 50%{transform:translateY(-10px)} 100%{transform:translateY(0)} }
+
+/* THEME BUTTON */
+.theme-btn {
+  position: absolute; top: 20px; right: 20px;
+  background: #fff; color: #2c3e50;
+  border: none; border-radius: 50%;
+  width: 40px; height: 40px; cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.theme-btn:hover { background: #f39c12; color: #fff; }
+
+/* SECTIONS */
+section { padding: 3rem 1.5rem; max-width: 950px; margin: auto; }
+section h2 { font-size: 1.8rem; margin-bottom: 1rem; border-bottom: 2px solid #e0e6ed; padding-bottom: 0.4rem; }
+
+/* RESUME BUTTON */
+.btn-resume {
+  display: inline-block; margin-top: 1.2rem; padding: 12px 22px;
+  background: #e74c3c; color: #fff; font-weight: 600; border-radius: 8px;
+  transition: 0.3s ease; font-size: 0.95rem;
+  text-decoration: none;
+}
+.btn-resume:hover { background: #c0392b; transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+/* SKILLS */
+#skills ul { list-style: none; display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1rem; }
+#skills li {
+  background: #3498db; color: white; padding: 10px 15px;
+  border-radius: 25px; font-size: 0.9rem;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+#skills li:hover { transform: scale(1.05); background: #2980b9; }
+
+/* PROJECTS */
+#projects article {
+  background: #fff; padding: 1.5rem; margin-bottom: 1.2rem;
+  border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#projects article:hover { transform: translateY(-4px); box-shadow: 0 4px 14px rgba(0,0,0,0.12); }
+#projects h3 { margin-bottom: 0.5rem; color: #e67e22; font-size: 1.2rem; }
+
+/* CONTACT */
+#contact ul { list-style: none; margin-top: 1rem; }
+#contact li { margin: 0.6rem 0; font-size: 1rem; }
+#contact i { color: #2980b9; margin-right: 8px; }
+
+/* FOOTER */
+footer {
+  text-align: center; background: #2c3e50; color: #fff; padding: 1rem;
+  margin-top: 2rem; 
+  font-size: 0.9rem; opacity: 0.9;
+}
+
+/* FADE-IN */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fade-in.appear { opacity: 1; transform: translateY(0); }
+
+/* DARK MODE */
+body.dark { background: #1e272e; color: #ecf0f1; }
+body.dark header { background: linear-gradient(135deg, #000, #222); }
+body.dark .btn-resume { background: #e67e22; }
+body.dark #skills li { background: #16a085; }
+body.dark #projects article { background: #2c3e50; color: #ecf0f1; }
+body.dark footer { background: #000; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header h1 { font-size: 1.8rem; }
+  #skills ul { flex-direction: column; gap: 8px; }
+  #skills li { text-align: center; }
+}
+@media (max-width: 480px) {
+  .profile-img { width: 110px; height: 110px; }
+  section { padding: 2rem 1rem; }
+}
+/* REMOVE UNDERLINE FROM ALL LINKS */
+a {
+  text-decoration: none;
+  color: inherit; /* inherit text color (can override in nav/contact) */
+}
+
+a:hover {
+  text-decoration: none; /* no underline on hover */
+}
+
+/* NAVIGATION LINKS */
+header nav a {
+  margin: 0 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #f8f8f8;
+}
+
+header nav a:hover {
+  color: #f39c12;
+}
+
+/* CONTACT LINKS */
+#contact a {
+  color: #2980b9;
+  font-weight: 500;
+}
+
+#contact a:hover {
+  color: #f39c12;
+}
